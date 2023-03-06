@@ -4,21 +4,18 @@ let buttons=document.querySelectorAll(".btn");
 
 buttons.forEach(button=>{
     button.addEventListener('click',function(){
-        button.classList.toggle('fa-chevron-down');
-        button.classList.toggle('fa-chevron-up');
-        let prevAct = document.querySelector(".active");
-        let currAct = button.nextElementSibling.nextElementSibling;
-        if(prevAct && prevAct != currAct){
-            prevAct.classList.toggle("d-none");
-            prevAct.previousElementSibling.toggle("fa-chevron-down")
-            prevAct.previousElementSibling.toggle("fa-chevron-up")
+        let prevAct = document.querySelector(".active"); 
+        let currAct = button.nextElementSibling.nextElementSibling; 
+        if(prevAct != null && prevAct != currAct){
+            prevAct.classList.toggle('d-none'); 
+            prevAct.classList.toggle("active");
+            prevAct.previousElementSibling.firstElementChild.classList.toggle('fa-chevron-down');
+            prevAct.previousElementSibling.firstElementChild.classList.toggle('fa-chevron-up');
         }
+        currAct.classList.toggle('d-none'); 
         currAct.classList.toggle("active");
-        //button.classList.toggle('fa-solid fa-chevron-up');
-
-        button.nextElementSibling.nextElementSibling.classList.toggle('d-none');
-    
+        button.nextElementSibling.firstElementChild.classList.toggle('fa-chevron-down');
+        button.nextElementSibling.firstElementChild.classList.toggle('fa-chevron-up');
     })
 })
-
 

@@ -4,14 +4,19 @@
     box-sizing: border-box;
 }
 
+body{
+    height: 100vh;
+}
+
 #container{
     width: 600px;
     height: 400px;
+    
 
 }
 #first{
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid white;
     position: relative;
     
     
@@ -19,7 +24,7 @@
 
 #second{
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid white;
     position: relative;
     
     
@@ -27,7 +32,7 @@
 
 #third{
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid white;
     position: relative;
     
     
@@ -36,7 +41,7 @@
 .row button{
     width: 100%;
     height: 60px;
-    background-color: palevioletred;
+    background-color: teal;
     cursor: pointer;
     
 }
@@ -67,7 +72,7 @@
 
 p{
     height: 100px;
+    background-color: rgb(145, 192, 176);
     
 }
-
 
